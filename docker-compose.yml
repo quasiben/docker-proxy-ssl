@@ -10,15 +10,15 @@ services:
 #    command: python -m SimpleHTTPServer 8823
 
 
-  app:
+  client:
     build: .
-    container_name: app
-    hostname: app
+    container_name: client
+    hostname: client
     network_mode: inside
     links:
       - proxy
       - ssl
-    command: bash /tmp/start_app.sh
+    command: bash /tmp/start_client.sh
     extra_hosts:
       - "proxy.io:192.168.99.129"
 

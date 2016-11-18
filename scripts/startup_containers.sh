@@ -16,8 +16,8 @@ fi
 
 docker-compose up -d
 
-# add ip of SSL container to APP container
+# add ip of SSL container to CLIENT container
 #ip=`docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ssl`
-#docker exec -it app bash -c "echo $ip proxy.io >> /etc/hosts"
+#docker exec -it client bash -c "echo $ip proxy.io >> /etc/hosts"
 
 docker network connect bridge proxy

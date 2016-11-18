@@ -14,14 +14,14 @@ RUN cat /tmp/NGINX_FILES/ca.cert.pem >> /etc/pki/tls/certs/ca-bundle.crt
 
 #startup scripts
 ADD start_ssl.sh /tmp/start_ssl.sh
-ADD start_app.sh /tmp/start_app.sh
+ADD start_client.sh /tmp/start_client.sh
 
 # Setup CONDA
 RUN curl -q -s -L -o /tmp/miniconda.sh http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 RUN bash /tmp/miniconda.sh -b -p /opt/miniconda
 ADD condarc /tmp/condarc
 
-RUN printf "allow app\nallow ssl\n" >> /etc/tinyproxy/tinyproxy.conf
+RUN printf "allow client\nallow ssl\n" >> /etc/tinyproxy/tinyproxy.conf
 CMD ["/usr/sbin/tinyproxy", "-c", "/etc/tinyproxy/tinyproxy.conf", "-d"]
 
 

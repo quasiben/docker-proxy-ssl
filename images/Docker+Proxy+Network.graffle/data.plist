@@ -46,7 +46,7 @@
 	<key>Creator</key>
 	<string>Benjamin Zaitlen</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 0/72 in = 1.0000 in</string>
 	<key>GraphDocumentVersion</key>
 	<integer>8</integer>
 	<key>GraphicsList</key>
@@ -62,10 +62,10 @@
 				<integer>6</integer>
 			</dict>
 			<key>ID</key>
-			<integer>401</integer>
+			<integer>404</integer>
 			<key>Points</key>
 			<array>
-				<string>{336.0000139115038, 328.95336914062506}</string>
+				<string>{286.99999865271531, 343.953369140625}</string>
 				<string>{288.3291015625008, 262.73864596314229}</string>
 			</array>
 			<key>Rotation</key>
@@ -85,59 +85,41 @@
 					<key>TailArrow</key>
 					<string>StickArrow</string>
 				</dict>
-			</dict>
-			<key>Tail</key>
-			<dict>
-				<key>ID</key>
-				<integer>399</integer>
-				<key>Info</key>
-				<integer>5</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>Class</key>
-			<string>LineGraphic</string>
-			<key>Head</key>
-			<dict>
-				<key>ID</key>
-				<integer>377</integer>
-				<key>Info</key>
-				<integer>6</integer>
-			</dict>
-			<key>ID</key>
-			<integer>400</integer>
-			<key>Points</key>
-			<array>
-				<string>{240.07370772801454, 328.85240270617902}</string>
-				<string>{288.3291015625008, 262.73864596314229}</string>
-			</array>
-			<key>Rotation</key>
-			<real>270</real>
-			<key>Style</key>
-			<dict>
-				<key>stroke</key>
-				<dict>
-					<key>HeadArrow</key>
-					<string>StickArrow</string>
-					<key>HeadScale</key>
-					<real>1.0000001192092896</real>
-					<key>Legacy</key>
-					<true/>
-					<key>Pattern</key>
-					<integer>11</integer>
-					<key>TailArrow</key>
-					<string>StickArrow</string>
-				</dict>
-			</dict>
-			<key>Tail</key>
-			<dict>
-				<key>ID</key>
-				<integer>398</integer>
 			</dict>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{297.19097900390625, 328.953369140625}, {77.618069815195071, 58.190184049079761}}</string>
+			<string>{{186, 328.953369140625}, {21.600000381469727, 26.000000459176519}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>403</integer>
+			<key>ImageID</key>
+			<integer>2</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{307, 397.3582763671875}, {77.618069815195071, 58.190184049079761}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -206,7 +188,7 @@ SSL Nginx}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{201.19097900390625, 328.953369140625}, {77.618069815195071, 58.190184049079761}}</string>
+			<string>{{197.236083984375, 397.3582763671875}, {77.618069815195071, 58.190184049079761}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -270,7 +252,7 @@ SSL Nginx}</string>
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
 \f0\b\fs18 \cf0 \expnd0\expndtw0\kerning0
-App}</string>
+Client}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -554,6 +536,29 @@ App}</string>
 Proxy}</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{165.8819580078125, 343.953369140625}, {244.236083984375, 165}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>4</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>CornerRadius</key>
+					<real>9</real>
+				</dict>
+			</dict>
+		</dict>
 	</array>
 	<key>GridInfo</key>
 	<dict/>
@@ -564,7 +569,15 @@ Proxy}</string>
 	<key>HPages</key>
 	<integer>1</integer>
 	<key>ImageCounter</key>
-	<integer>1</integer>
+	<integer>3</integer>
+	<key>ImageLinkBack</key>
+	<array>
+		<dict/>
+	</array>
+	<key>ImageList</key>
+	<array>
+		<string>image2.tiff</string>
+	</array>
 	<key>KeepToScale</key>
 	<false/>
 	<key>Layers</key>
@@ -602,7 +615,7 @@ Proxy}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2016-11-18 03:07:10 +0000</string>
+	<string>2016-11-18 16:40:55 +0000</string>
 	<key>Modifier</key>
 	<string>Benjamin Zaitlen</string>
 	<key>NotesVisible</key>
@@ -697,7 +710,7 @@ Proxy}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-213, 0}, {1002, 654}}</string>
+		<string>{{-213, 9}, {1002, 654}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
