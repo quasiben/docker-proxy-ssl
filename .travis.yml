@@ -10,7 +10,7 @@ services:
 
 env:
   global:
-    - DOCKER_COMPOSE_VERSION=1.6.0
+    - DOCKER_COMPOSE_VERSION=1.9.0
 
 before_install:
 
@@ -20,14 +20,17 @@ before_install:
   - docker-compose version
 
   # Start containers
-  - bash scripts/startup_container.sh
+  - bash scripts/startup_containers.sh
   - docker ps
   - docker images
 
+  # install conda packages and wait until finished
   - bash scripts/wait_until_finished.sh
 
 install:
-  - docker exec -it app /bin/bash -c '/opt/miniconda/bin/conda install boto -y'
+  - docker exec -it app /bin/bash -c 'cat /etc/hosts'
+  - docker exec -it ssl /bin/bash -c 'ifconfig'
+  - docker exec -it app /bin/bash -c '/opt/miniconda/bin/conda install boto -y -q'
 
 script:
   - bash scripts/test_conda_install.sh

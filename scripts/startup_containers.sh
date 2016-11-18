@@ -1,8 +1,8 @@
 #!/bin/bash
 
-network=inside
+network="inside"
 
-docker network ls | grep $network
+aa=`docker network ls | grep $network`
 
 if [ $? -eq 0 ]; then
     echo "Network exists"
@@ -14,6 +14,10 @@ else
 
 fi
 
+docker-compose up -d
 
-docker-compose up --build -d
+# add ip of SSL container to APP container
+#ip=`docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ssl`
+#docker exec -it app bash -c "echo $ip proxy.io >> /etc/hosts"
+
 docker network connect bridge proxy

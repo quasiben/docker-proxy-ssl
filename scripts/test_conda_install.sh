@@ -1,13 +1,16 @@
 #!/bin/bash
 
-string=`docker exec -it app /bin/bash -c '/opt/miniconda/bin/conda list botod'`
+set -e
+set -x
+
+string=`docker exec -it app /bin/bash -c '/opt/miniconda/bin/conda list boto'`
 
 if [[ $string == *"boto"* ]]
 then
   echo "Success!";
-  echo 0
+  exit 0
 else
   echo "Failure"
-  echo 1
+  exit 1
 fi
 
