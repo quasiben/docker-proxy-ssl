@@ -1,0 +1,33 @@
+language: python
+dist: trusty
+sudo: required
+
+notifications:
+  email: false
+
+services:
+  - docker
+
+env:
+  global:
+    - DOCKER_COMPOSE_VERSION=1.6.0
+
+before_install:
+
+  # Install docker
+  - bash scripts/travis_docker_setup.sh
+  - docker version
+  - docker-compose version
+
+  # Start containers
+  - bash scripts/startup_container.sh
+  - docker ps
+  - docker images
+
+  - bash scripts/wait_until_finished.sh
+
+install:
+  - docker exec -it app /bin/bash -c '/opt/miniconda/bin/conda install boto -y'
+
+script:
+  - bash scripts/test_conda_install.sh

@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+  proxy:
+    build: .
+    image: proxy
+    container_name: proxy
+    hostname: proxy
+    network_mode: inside
+#    command: python -m SimpleHTTPServer 8823
+
+
+  app:
+    build: .
+    container_name: app
+    hostname: app
+    network_mode: inside
+    links:
+      - proxy
+      - ssl
+    command: bash /tmp/start_app.sh
+    extra_hosts:
+      - "proxy.io:192.168.99.129"
+
+
+  ssl:
+    build: .
+    container_name: ssl
+    hostname: ssl
+    network_mode: inside
+    links:
+      - proxy
+    command: bash /tmp/start_ssl.sh
+
+#http_proxy=proxy:8888 https_proxy=proxy:8888 curl -L https://continuum.io

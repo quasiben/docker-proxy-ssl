@@ -1,0 +1,5 @@
+channels:
+  - https://proxy.io/
+
+ssl_verify: /etc/pki/tls/certs/ca-bundle.crt
+allow_other_channels: True
